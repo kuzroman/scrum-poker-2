@@ -70,7 +70,7 @@
 console.log(222, import.meta.env);
 // let IP = '192.168.1.101';
 
-console.log('IP', IP);
+// console.log('IP', IP);
 
 const ws = new WebSocket(`ws://127.0.0.1:3100`);
 const defaultClick = 10;
