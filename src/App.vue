@@ -67,12 +67,7 @@
 </template>
 
 <script>
-console.log(222, import.meta.env);
-// let IP = '192.168.1.101';
-
-// console.log('IP', IP);
-
-const ws = new WebSocket(`ws://127.0.0.1:3100`);
+const ws = new WebSocket(`ws://${IP}:${import.meta.env.VITE_WEB_SOCKET_PORT}`);
 const defaultClick = 10;
 let idTimeout;
 const SesName = 'SPName';

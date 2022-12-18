@@ -3,8 +3,6 @@ require('dotenv').config()
 const WebSocket = require('ws');
 const server = new WebSocket.Server({port: process.env.VITE_WEB_SOCKET_PORT});
 
-// console.log(111,  process.env.VITE_WEB_SOCKET_PORT);
-
 let users = [];
 
 server.on('connection', ws => {
