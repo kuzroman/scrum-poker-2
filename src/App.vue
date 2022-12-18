@@ -67,7 +67,7 @@
 </template>
 
 <script>
-const ws = new WebSocket(`ws://${IP}:${import.meta.env.VITE_WEB_SOCKET_PORT}`);
+const ws = new WebSocket(`wss://${IP}:${import.meta.env.VITE_WEB_SOCKET_PORT}`);
 const defaultClick = 10;
 let idTimeout;
 const SesName = 'SPName';
