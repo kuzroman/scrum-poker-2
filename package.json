@@ -1,0 +1,23 @@
+{
+  "name": "scrum-poker",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "node server.cjs"
+  },
+  "dependencies": {
+    "vue": "^3.2.45",
+    "ws": "^8.11.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "dotenv": "^16.0.3",
+    "ip": "^1.1.8",
+    "less": "^4.1.3",
+    "vite": "^4.0.0"
+  }
+}
