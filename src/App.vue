@@ -67,7 +67,7 @@
 </template>
 
 <script>
-const ws = new WebSocket(`wss://${IP}:${import.meta.env.VITE_WEB_SOCKET_PORT}`);
+const ws = new WebSocket(`ws://${IP}:${import.meta.env.VITE_WEB_SOCKET_PORT}`);
 const defaultClick = 10;
 let idTimeout;
 const SesName = 'SPName';
@@ -188,10 +188,9 @@ export default {
     window.addEventListener('beforeunload', this.rename);
   },
   mounted() {
-    console.log("isWebSocketOpen", this.isWebSocketOpen(ws));
     setTimeout(() => {
-      console.log("isWebSocketOpen 2", this.isWebSocketOpen(ws));
-    }, 5000)
+      console.log("isWebSocketOpen", this.isWebSocketOpen(ws));
+    }, 1000)
     
     
     ws.onmessage = response => {

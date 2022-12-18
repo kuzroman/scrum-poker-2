@@ -1,4 +1,13 @@
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+
 require('dotenv').config()
+
+// import { createServer } from 'https';
+// const server = createServer({
+//   cert: readFileSync('/path/to/cert.pem'),
+//   key: readFileSync('/path/to/key.pem')
+// });
 
 const WebSocket = require('ws');
 const server = new WebSocket.Server({port: process.env.VITE_WEB_SOCKET_PORT});
