@@ -11,7 +11,7 @@
     "server": "node server.cjs"
   },
   "stackblitz": {
-    "startCommand": "npm run start"
+    "startCommand": "npm run dev"
   },
   "dependencies": {
     "vue": "^3.2.45",
