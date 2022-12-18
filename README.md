@@ -5,8 +5,7 @@ Work on Node.js with WebSocket
 #### Get start:
 ```
 pnpm i
-npm run server
-npm run dev
+npm run start
 ```
 Enjoy!
 
