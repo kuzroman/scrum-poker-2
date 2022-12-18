@@ -100,6 +100,9 @@ export default {
     }
   },
   methods: {
+    isWebSocketOpen(ws) {
+      return ws.readyState === ws.OPEN 
+    },
     rename() {
       this.removeUser(this.name);
       sessionStorage.removeItem(SesName);
@@ -185,6 +188,12 @@ export default {
     window.addEventListener('beforeunload', this.rename);
   },
   mounted() {
+    console.log("isWebSocketOpen", this.isWebSocketOpen);
+    setTimeout(() => {
+      console.log("isWebSocketOpen 2", isWebSocketOpen);
+    }, 5000)
+    
+    
     ws.onmessage = response => {
       this.users = JSON.parse(response.data);
     };
