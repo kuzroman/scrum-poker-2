@@ -4,10 +4,14 @@
   "version": "0.2.0",
   "type": "module",
   "scripts": {
+    "start": "concurrently --kill-others \"npm run server\" \"npm run dev\"",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "server": "node server.cjs"
+  },
+  "stackblitz": {
+    "startCommand": "npm run start"
   },
   "dependencies": {
     "vue": "^3.2.45",
@@ -15,6 +19,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
+    "concurrently": "^7.6.0",
     "dotenv": "^16.0.3",
     "ip": "^1.1.8",
     "less": "^4.1.3",
