@@ -188,9 +188,9 @@ export default {
     window.addEventListener('beforeunload', this.rename);
   },
   mounted() {
-    console.log("isWebSocketOpen", this.isWebSocketOpen);
+    console.log("isWebSocketOpen", this.isWebSocketOpen(ws));
     setTimeout(() => {
-      console.log("isWebSocketOpen 2", isWebSocketOpen);
+      console.log("isWebSocketOpen 2", this.isWebSocketOpen(ws));
     }, 5000)
     
     
